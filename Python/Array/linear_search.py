@@ -6,14 +6,14 @@ def linearsearch(nums, N, target):
  
  
 # Driver Code
-if __name__ == "__main__":
-    nums = list(map(int,input().split()))
-    target = int(input())
-    N = len(nums)
+
+nums = list(map(int,input().split()))
+target = int(input())
+N = len(nums)
  
-    # Function call
-    ans = linearsearch(nums, N, target)
-    if(ans == -1):
-        print("Element is not present in array")
-    else:
-        print("Element is present at index", ans)
+# Function call
+ans = linearsearch(nums, N, target)
+if(ans == -1):
+    print("Element is not present in array")
+else:
+    print("Element is present at index", ans)
