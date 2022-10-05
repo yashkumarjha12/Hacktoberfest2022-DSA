@@ -1,27 +1,23 @@
-# (d) write a python program to perform the binary search
-
-def binary_search(list, item):
+# Python program to perform  binary search
+def binary_search(arr, target):
     low = 0
-    high = len(list) - 1
-
+    high = len(arr) - 1
     while low <= high:
         mid = (low + high) // 2
-        guess = list[mid]
-        if guess == item:
+        if arr[mid] == target:
             return mid
-        if guess > item:
+        if arr[mid] > target:
             high = mid - 1
         else:
             low = mid + 1
-    return None
+    return -1
 
 
-list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-item = int(input("Enter the item to be searched: "))
-index = binary_search(list, item)
-if index == -1:
+arr = list(map(int,input().split()))
+target = int(input("Enter the item to be searched: "))
+result = binary_search(arr, target)
+if result == -1:
     print("Item not found")
 else:
-    print("Item found at index: ", index)
+    print("Item found at index: ", result)
 
-print(list)
