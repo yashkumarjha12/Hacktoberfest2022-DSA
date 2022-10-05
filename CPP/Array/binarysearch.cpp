@@ -3,10 +3,10 @@ using namespace std;
 
 int BinarySearch(int n, int search, int arr[])
 {
-    int s = 0;
-    int e = n;
-    int mid = (s + e) / 2;
-    while (s <= e)
+    int l = 0;
+    int r = n;
+    int mid =  l + (r-l)/2 ; /* suppose we take large number and by adding it will definitely overflow so to avoid it l+(r-l)/2 is prefered */
+    while (l <= r)
     {
         if (arr[mid] == search)
         {
@@ -14,10 +14,10 @@ int BinarySearch(int n, int search, int arr[])
         }
         else if (arr[mid] < search)
         {
-            s = mid + 1;
+            l = mid + 1;
         }
         else{
-            e=mid-1;
+            r=mid-1;
         }
     }
     return -1;
@@ -39,3 +39,4 @@ int main()
 
     return 0;
 }
+
