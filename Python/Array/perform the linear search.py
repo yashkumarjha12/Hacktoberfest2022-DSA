@@ -1,19 +1,15 @@
-# (c) write a python program to perform the linear search
-
-
-def linear_search(list, item):
-    for i in range(len(list)):
-        if list[i] == item:
+#Python program to perform the linear search
+def linearsearch(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
             return i
     return -1
 
 
-list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lst = [7,5,48,15,9,5,123,45,35]
 item = int(input("Enter the item to be searched: "))
-index = linear_search(list, item)
+index = linearsearch(lst, item)
 if index == -1:
     print("Item not found")
 else:
     print("Item found at index: ", index)
-
-print(list)
